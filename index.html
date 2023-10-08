@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A simple to-do web application to test the vue.js framework." />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
+
+    <title>To-do</title>
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net/npm/" crossorigin />
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css" />
+  </head>
+
+  <body class="container">
+    <header>
+      <nav>
+        <ul>
+          <li><strong>To-do</strong></li>
+        </ul>
+
+        <ul>
+          <li>
+            <button class="outline">New</button>
+          </li>
+          <li>
+            <button class="outline">Delete Completed</button>
+          </li>
+          <li>
+            <button class="outline">Delete All</button>
+          </li>
+        </ul>
+      </nav>
+
+      <dialog>
+        <form>
+          <article>
+            <header>
+              <div role="link" class="close" aria-label="Close" tabindex="0"></div>
+              <strong>New To-do</strong>
+            </header>
+
+            <div>
+              <label>To-do text:</label>
+              <input x-ref="textInput" x-model="text" type="text" aria-label="To-do text" required />
+            </div>
+
+            <footer>
+              <a role="button" class="outline" aria-label="Create" href="">Confirm</a>
+            </footer>
+          </article>
+        </form>
+      </dialog>
+    </header>
+
+    <main style="padding: 0">
+      <ul>
+        <li style="list-style: none">
+          <input type="checkbox" />
+          <span>Todo Exemple</span>
+        </li>
+      </ul>
+    </main>
+
+    <footer>
+      <progress value="0" aria-label="Progress bar"></progress>
+    </footer>
+  </body>
+</html>
